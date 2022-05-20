@@ -4,7 +4,7 @@ const fileUpload = require('express-fileupload');
 const http = require('http');
 const socketIO = require('socket.io');
 const { conectarCliente } = require('../sockets/usuario-socket');
-const sequelize = require('../db/dbCatedral');
+const sequelize = require('../dataBase/dbCatedral');
 class Server{
     static _intance=Server;
     io=socketIO.Server;

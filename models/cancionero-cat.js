@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize/types");
-
+const sequelize = require('../dataBase/dbCatedral');
 
 
 class Cancionerocat extends Model{};
@@ -20,6 +20,7 @@ Cancionerocat.init({
         type:DataTypes.INTEGER
     }
 },{
+    sequelize,
     tableName:'cancionero_cat'
 });
 
