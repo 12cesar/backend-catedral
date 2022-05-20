@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize/types");
 
 
-
+const sequelize = require('../dataBase/dbCatedral');
 class Noticias extends Model{};
 
 
@@ -29,7 +29,9 @@ Noticias.init({
         type:DataTypes.INTEGER
     }
 },{
-    tableName:'noticias'
+    sequelize,
+    tableName:'noticias',
+    timestamps:false
 });
 
 /* Relacion clase noticia - noti - imagen */
